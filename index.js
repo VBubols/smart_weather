@@ -43,7 +43,7 @@ wppClient.on('ready', () => {
     console.log('  Bot do WhatsApp conectado e pronto!'); 
 }); 
  
-wppClient.on('message', async (msg) => { 
+wppClient.on('message_create', async (msg) => { 
     // Quando alguém mandar "!relatorio", disparamos a automação 
     if (msg.body === '!relatorio') { 
         msg.reply('  Entendido! Solicitando análise da IA e gerando o PDF. Aguarde um instante...'); 
@@ -128,6 +128,4 @@ async function gerarRelatorioIA() {
             reject(err); 
         } 
     }); 
-} 
- 
- 
+}
