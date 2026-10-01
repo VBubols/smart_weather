@@ -1,0 +1,2 @@
+Link do repositório git: https://github.com/VBubols/smart_weather
+Link do código no WOKWI: https://wokwi.com/projects/472642930790354945 (caso não abra o código está no repositório, assim como o print do código e circuito estão na pasta de evidências)

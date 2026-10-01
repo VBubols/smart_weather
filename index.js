@@ -55,7 +55,11 @@ wppClient.on('message_create', async (msg) => {
             const media = MessageMedia.fromFilePath(nomeArquivo); 
              
             // Enviamos o arquivo de volta para quem pediu 
-            await wppClient.sendMessage(msg.from, media, { caption: '  Aqui está o seu Laudo do Smart Weather!' }); 
+            await msg.reply(media, undefined, { 
+                caption: '  Aqui está o seu Laudo do Smart Weather!',
+                sendMediaAsDocument: true,
+                sendSeen: false 
+            }); 
              
             console.log('  PDF enviado com sucesso!'); 
         } catch (error) { 
